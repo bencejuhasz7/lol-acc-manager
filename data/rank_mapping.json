@@ -1,0 +1,130 @@
+{
+    "Unranked": {
+        "clean_name": "Unranked",
+        "value": 0
+    },
+    "iron 4": {
+        "clean_name": "Iron IV",
+        "value": 1
+    },
+    "iron 3": {
+        "clean_name": "Iron III",
+        "value": 2
+    },
+    "iron 2": {
+        "clean_name": "Iron II",
+        "value": 3
+    },
+    "iron 1": {
+        "clean_name": "Iron I",
+        "value": 4
+    },
+    "bronze 4": {
+        "clean_name": "Bronze IV",
+        "value": 5
+    },
+    "bronze 3": {
+        "clean_name": "Bronze III",
+        "value": 6
+    },
+    "bronze 2": {
+        "clean_name": "Bronze II",
+        "value": 7
+    },
+    "bronze 1": {
+        "clean_name": "Bronze I",
+        "value": 8
+    },
+    "silver 4": {
+        "clean_name": "Silver IV",
+        "value": 9
+    },
+    "silver 3": {
+        "clean_name": "Silver III",
+        "value": 10
+    },
+    "silver 2": {
+        "clean_name": "Silver II",
+        "value": 11
+    },
+    "silver 1": {
+        "clean_name": "Silver I",
+        "value": 12 
+    },
+    "gold 4": {
+        "clean_name": "Gold IV",
+        "value": 13
+    },
+    "gold 3": {
+        "clean_name": "Gold III",
+        "value": 14
+    },
+    "gold 2": {
+        "clean_name": "Gold II",
+        "value": 15
+    },
+    "gold 1": {
+        "clean_name": "Gold I",
+        "value": 16
+    },
+    "platinum 4": {
+        "clean_name": "Platinum IV",
+        "value": 17
+    },
+    "platinum 3": {
+        "clean_name": "Platinum III",
+        "value": 18
+    },
+    "platinum 2": {
+        "clean_name": "Platinum II",
+        "value": 19
+    },
+    "platinum 1": {
+        "clean_name": "Platinum I",
+        "value": 20
+    },
+    "emerald 4": {
+        "clean_name": "Emerald IV",
+        "value": 21
+    },
+    "emerald 3": {
+        "clean_name": "Emerald III",
+        "value": 22
+    },
+    "emerald 2": {
+        "clean_name": "Emerald II",
+        "value": 23
+    },
+    "emerald 1": {
+        "clean_name": "Emerald I",
+        "value": 24
+    },
+    "diamond 4": {
+        "clean_name": "Diamond IV",
+        "value": 25
+    },
+    "diamond 3": {
+        "clean_name": "Diamond III",
+        "value": 26
+    },
+    "diamond 2": {
+        "clean_name": "Diamond II",
+        "value": 27
+    },
+    "diamond 1": {
+        "clean_name": "Diamond I",
+        "value": 28
+    },
+    "master": {
+        "clean_name": "Master",
+        "value": 29
+    },
+    "grandmaster": {
+        "clean_name": "Grandmaster",
+        "value": 30
+    },
+    "challenger": {
+        "clean_name": "Challenger",
+        "value": 31
+    }
+}
