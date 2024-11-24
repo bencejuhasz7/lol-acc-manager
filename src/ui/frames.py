@@ -237,14 +237,20 @@ class AccountsFrame:
                 "No Server Found",
                 "Please enter a server name first..."
             ).show()
-            if server_name and self.data_manager.add_server(server_name):
-                current_server = server_name
-                # Update server dropdown using server_frame reference
-                self.server_frame.server_dropdown.configure(
-                    values=self.data_manager.accounts_data["servers"],
-                    state="normal"
-                )
-                self.server_frame.server_var.set(server_name)
+            
+            if server_name:
+                # Convert to uppercase before adding
+                server_name = server_name.upper()
+                if self.data_manager.add_server(server_name):
+                    current_server = server_name
+                    # Update server dropdown using server_frame reference
+                    self.server_frame.server_dropdown.configure(
+                        values=self.data_manager.accounts_data["servers"],
+                        state="normal"
+                    )
+                    self.server_frame.server_var.set(server_name)
+                else:
+                    return
             else:
                 return
         

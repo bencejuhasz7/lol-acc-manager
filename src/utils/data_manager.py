@@ -1,17 +1,27 @@
 import json
 import os
 from pathlib import Path
+import sys
 
 class DataManager:
     """Handles all data operations for the application."""
     
     def __init__(self):
-        # Get the root directory of the project
-        self.root_dir = Path(__file__).parent.parent.parent
-        self.data_file = self.root_dir / "data" / "accounts.json"
+        # Get the application directory (works for both script and exe)
+        if getattr(sys, 'frozen', False):
+            # Running as executable
+            self.root_dir = Path(sys._MEIPASS).parent
+        else:
+            # Running as script
+            self.root_dir = Path(__file__).parent.parent.parent
         
-        # Create data directory and empty accounts.json if they don't exist
-        os.makedirs(self.root_dir / "data", exist_ok=True)
+        # Create data directory next to the executable/script
+        self.data_dir = self.root_dir / "data"
+        os.makedirs(self.data_dir, exist_ok=True)
+        
+        self.data_file = self.data_dir / "accounts.json"
+        
+        # Create empty accounts.json if it doesn't exist
         if not self.data_file.exists():
             self.create_empty_accounts_file()
         
@@ -48,7 +58,8 @@ class DataManager:
         # Convert server name to uppercase
         server_name = server_name.upper()
         
-        if server_name not in self.accounts_data["servers"]:
+        # Check if server exists (case-insensitive check)
+        if server_name not in [s.upper() for s in self.accounts_data["servers"]]:
             self.accounts_data["servers"].append(server_name)
             self.accounts_data[server_name] = []  # Initialize empty account list
             if not self._current_server:
